@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Emscripten-Generated Code</title>
+
+</head>
+<body>
+    <center>
+        <h1>Cifrado de Cesar</h1>
+        <h2>Ingresa el texto (sin signos de puntuación)</h2>
+        <textarea id="input" rows="8"></textarea>
+        <br />
+        <input type="radio" id="code" name="caesar" checked />
+        <label for="code">Codificar</label>
+        <input type="radio" id="decode" name="caesar" />
+        <label for="decode">Decodificar</label>
+        <br />
+        Rotación <input type="number" min="1" max="25" id="rot" value="13" />
+        <br />
+        <button class="button">Resultado</button>
+        <br />
+        <textarea id="output" rows="8"></textarea>
+    </center>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.4.0/rxjs.umd.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="caesar.js"></script>
+</body>
+</html>
+
+
