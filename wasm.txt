@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Emscripten-Generated Code</title>
+
+</head>
+<body>
+    <textarea id="input" rows="8"></textarea>
+    <textarea id="output" rows="8"></textarea>
+    <input type="number" min="1" max="25" id="rot" value="13" />
+    <input type="radio" id="code" name="caesar" checked />
+    <label for="code">Codificar</label>
+    <input type="radio" id="decode" name="caesar" />
+    <label for="decode">Decodificar</label>
+    <button class="button">Resultado</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.4.0/rxjs.umd.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="caesar.js"></script>
+</body>
+</html>
+
+emsdk activate latest
+emsdk_env.bat
+cd ..
+python -m SimpleHTTPServer 8080
+
+emcc -o index.html cipher.cpp -s WASM=1 -s NO_EXIT_RUNTIME=1  -s ERROR_ON_UNDEFINED_SYMBOLS=0 -s "EXTRA_EXPORTED_RUNTIME_METHODS=['ccall']"
