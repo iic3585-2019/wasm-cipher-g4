@@ -17,3 +17,13 @@ rxjs.fromEvent(button, 'click').subscribe(() => {
     );
     document.getElementById('output').innerHTML = result;
 });
+
+rxjs.fromEvent(button, 'click').subscribe(() => {
+    let result = Module.ccall(
+        'morse_encode',	// name of C function
+        'string',	// return type
+        ['string'],	// argument types
+        ["nananan"]	// arguments
+    );
+    console.log(result);
+});

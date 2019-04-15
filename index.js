@@ -1746,6 +1746,14 @@ function copyTempDouble(ptr) {
 // {{PRE_LIBRARY}}
 
 
+  function __Z7decoderPKc() {
+  err('missing function: _Z7decoderPKc'); abort(-1);
+  }
+
+  function __Z7encoderPKc() {
+  err('missing function: _Z7encoderPKc'); abort(-1);
+  }
+
   function ___lock() {}
 
   
@@ -1915,6 +1923,8 @@ var asmLibraryArg = {
   "abortStackOverflow": abortStackOverflow,
   "nullFunc_ii": nullFunc_ii,
   "nullFunc_iiii": nullFunc_iiii,
+  "__Z7decoderPKc": __Z7decoderPKc,
+  "__Z7encoderPKc": __Z7encoderPKc,
   "___lock": ___lock,
   "___setErrNo": ___setErrNo,
   "___syscall140": ___syscall140,
@@ -1962,6 +1972,18 @@ var real__malloc = asm["_malloc"]; asm["_malloc"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
   return real__malloc.apply(null, arguments);
+};
+
+var real__morse_decode = asm["_morse_decode"]; asm["_morse_decode"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return real__morse_decode.apply(null, arguments);
+};
+
+var real__morse_encode = asm["_morse_encode"]; asm["_morse_encode"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return real__morse_encode.apply(null, arguments);
 };
 
 var real__sbrk = asm["_sbrk"]; asm["_sbrk"] = function() {
@@ -2022,6 +2044,14 @@ var _memset = Module["_memset"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
   return Module["asm"]["_memset"].apply(null, arguments) };
+var _morse_decode = Module["_morse_decode"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return Module["asm"]["_morse_decode"].apply(null, arguments) };
+var _morse_encode = Module["_morse_encode"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return Module["asm"]["_morse_encode"].apply(null, arguments) };
 var _sbrk = Module["_sbrk"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
