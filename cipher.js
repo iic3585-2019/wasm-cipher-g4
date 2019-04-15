@@ -21,7 +21,7 @@ rxjs.fromEvent(button, 'click').subscribe(() => {
       types = ['string', 'number', 'number'] ;
       args = [input, input.length, rotation];
     }
-    if (cipher == 'morse') {
+    if (cipher == 'morse_encode') {
       types = ['string'] ;
       args = [input];
     }
