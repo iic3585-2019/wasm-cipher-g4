@@ -1,8 +1,8 @@
-#include <iostream> 
+#include <iostream>
 #include <ctype.h>
 #include <emscripten/emscripten.h>
 #include "./morse-code/src/encode.c"
-#include "./morse-code/src/decode.c"
+#include "vigenere.c"
 
 #ifdef __cplusplus
 extern "C" {
@@ -17,15 +17,20 @@ extern "C" {
 		return text;
 	}
 
-	
 		char* EMSCRIPTEN_KEEPALIVE morse_encode(char* text) {
 		return encoder(text);
 	}
 
-	
-		char* EMSCRIPTEN_KEEPALIVE morse_decode(char* text) {
-		return decoder(text);
-	}
+	char* EMSCRIPTEN_KEEPALIVE vigenere_encoder(char* text, char* key) {
+	return vigenere_encode(text, key);
+}
+
+
+	char* EMSCRIPTEN_KEEPALIVE vigenere_decoder(char* text, char* key) {
+	return vigenere_decode(text, key);
+}
+
+
 #ifdef __cplusplus
 }
 #endif
