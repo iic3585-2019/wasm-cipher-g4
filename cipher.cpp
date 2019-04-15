@@ -1,8 +1,8 @@
 #include <iostream> 
 #include <ctype.h>
 #include <emscripten/emscripten.h>
-#include "morse-code/include/encode.h"
-#include "morse-code/include/decode.h"
+#include "./morse-code/src/encode.c"
+#include "./morse-code/src/decode.c"
 
 #ifdef __cplusplus
 extern "C" {
