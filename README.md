@@ -4,9 +4,9 @@ El proyecto consiste en una aplicación de codificación y decodificación de te
 
 ## Funcionalidades
 
-1. Cifrado de Cesar: Codificación/Decodificación. Elimina puntuación en el proceso
-2. Vigenere: Codificación/Decodificación. Transforma texto a mayúsculas
-3. Morse: Codificación
+1. [Cifrado de Cesar](https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar): Codificación/Decodificación. Limitación: Elimina puntuación en el proceso
+2. [Vigenere](https://es.wikipedia.org/wiki/Cifrado_de_Vigen%C3%A8re): Codificación/Decodificación. Limitación: Transforma texto a mayúsculas
+3. [Morse](https://es.wikipedia.org/wiki/C%C3%B3digo_morse): Codificación
 
 La aplicación se puede probar [aquí](https://iic3585-2019.github.io/wasm-cipher-g4/index.html)
 
